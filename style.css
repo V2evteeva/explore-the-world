@@ -1,0 +1,74 @@
+body {
+    background-color: #e6f2ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.travel-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card h3 {
+    color: darkblue;
+}
+
+
+/* Заголовки */
+.page-title {
+    font-size: 36px;
+    color: darkblue;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    color: darkred;
+    text-align: center;
+}
+
+/* Посилання */
+.nav-link {
+    color: green;
+    text-decoration: none;
+}
+
+/* Виділений текст */
+.text-highlight {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Унікальний ID */
+#main-header {
+    font-size: 40px;
+}
+
+/* Таблиці */
+.content-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+}
+
+.content-table th,
+.content-table td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.content-table th {
+    background-color: lightblue;
+}

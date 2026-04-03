@@ -3,53 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Explore The World - Головна</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style> 
+    a {
+    color: red !important;
+    }  
+    </style>
+
 </head>
 
-<body bgcolor="#e6f2ff" link="darkblue" vlink="darkblue">
 
-<h1>Explore The World</h1>
+<body>
 
-<p><b>Автор:</b> Вероніка Євтєєва</p>
+<h1 id="main-header" class="page-title">Explore The World</h1>
 
-<a href="europe.html">Європа</a><br>
-<a href="asia.html">Азія</a><br>
-<a href="europe.html#table">Перейти до складної таблиці</a><br>
-<a href="https://www.google.com" target="_blank">Google</a>
+<p style="color: blue;"><b>Автор:</b> Вероніка Євтєєва</p>
+
+<a href="europe.html" class="nav-link">Європа</a><br>
+<a href="asia.html" class="nav-link">Азія</a><br>
+<a href="food.html" class="nav-link">Кухні світу</a><br>
+<a href="europe.html#table" class="nav-link">Порівняння країн</a><br>
 
 <p><i>Подорожі</i> дозволяють відкривати нові країни та культури.</p>
 
-<p>Це веб-сайт про подорожі та різні частини світу.</p>
-
-<a href="images/world.jpg" target="_blank">
-    <img src="images/world.jpg" width="600" height="300">
-</a>
+<p class="text-highlight">
+Це веб-сайт про подорожі та різні частини світу.
+</p>
 
 
-<h2>Типи подорожей</h2>
 
-<ul type="circle">
-    <li>Відпочинок</li>
-    <li>Екскурсії</li>
-</ul>
+<a href="images/world.jpg" target="_blank"> <img src="images/world.jpg" width="600" height="300"> </a>
 
-<ol type="1">
-    <li>Європа</li>
-    <li>Азія</li>
-</ol>
 
-<dl>
-    <dt>Туризм</dt>
-    <dd>Подорожі з метою відпочинку</dd>
-</dl>
+
+<h2 class="section-title">Типи подорожей</h2>
+
+<div class="travel-cards">
+
+    <div class="card">
+        <h3>Відпочинок</h3>
+        <p>Релакс на морі, пляжі та курорти.</p>
+    </div>
+
+    <div class="card">
+        <h3>Екскурсії</h3>
+        <p>Подорожі з відвідуванням пам’яток і міст.</p>
+    </div>
+
+    <div class="card">
+        <h3>Пригоди</h3>
+        <p>Гори, походи, активний відпочинок та екстрим.</p>
+    </div>
+
+    <div class="card">
+        <h3>Культурні подорожі</h3>
+        <p>Знайомство з традиціями, музеями та історією.</p>
+    </div>
+
+
+</div>
 
 <br>
 
+
 <!-- Таблиця 3x4 -->
-<h2>Популярні напрямки</h2>
+<h2 class="section-title">Популярні напрямки</h2>
 
-<table border="1" width="600" cellpadding="30" align="center">
+<table class="content-table">
 
-<tr bgcolor="lightblue">
+<tr>
     <th>Франція</th>
     <th>Японія</th>
     <th>Італія</th>
@@ -62,9 +86,9 @@
 </tr>
 
 <tr>
-    <td><a href="https://www.france.fr" target="_blank">Переглянути</a></td>
-    <td><a href="https://www.japan-guide.com" target="_blank">Переглянути</a></td>
-    <td><a href="https://www.italia.it" target="_blank">Переглянути</a></td>
+    <td><a href="https://www.france.fr" target="_blank" class="nav-link">Переглянути</a></td>
+    <td><a href="https://www.japan-guide.com" target="_blank" class="nav-link">Переглянути</a></td>
+    <td><a href="https://www.italia.it" target="_blank" class="nav-link">Переглянути</a></td>
 </tr>
 
 <tr>
@@ -78,6 +102,7 @@
 <br>
 
 <!-- Фрейм -->
+<h2 class="section-title">Відео</h2>
 <iframe width="500" height="300"
 src="https://www.youtube.com/embed/xC9J32eBb9w"
 allowfullscreen>
