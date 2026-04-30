@@ -12,6 +12,14 @@ body {
     margin: 20px;
 }
 
+/* Контейнер турів */
+.tour-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+
 /* Картки */
 .extreme-card {
     background-color: #ffe6e6;
@@ -40,6 +48,29 @@ body {
     color: darkblue;
 }
 
+/* Картка тур Європою */
+.tour-card {
+    position: relative;
+    background: #ffffff;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 3px solid rgb(81, 180, 205);
+}
+
+/* Бейдж */
+.ribbon {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: red;
+    color: white;
+    padding: 5px 15px;
+    font-size: 12px;
+    transform: rotate(-20deg);
+    border-radius: 5px;
+}
 
 /* Заголовки */
 .page-title {
@@ -63,10 +94,38 @@ body {
     color: rgb(20, 1, 60);
 }
 
+/* Псевдоелементи для заголовків */
+.section-title::before {
+    content: "★ ";
+    color: orange;
+}
+
+.section-title::after {
+    content: " ★";
+    color: orange;
+}
+
 /* Посилання */
 .nav-link {
     color: green;
     text-decoration: none;
+}
+
+/* Псевдокласи для посилань */
+.nav-link:link {
+    color: green;
+}
+
+.nav-link:visited {
+    color: purple;
+}
+
+.nav-link:hover {
+    color: orange;
+}
+
+.nav-link:active {
+    color: red;
 }
 
 /* Виділений текст */
@@ -152,4 +211,10 @@ button {
 /* Сусідній селектор */
 h2 + table {
     border: 3px solid rgb(126, 2, 7);
+}
+
+/* Перший елемент списку */
+ul li:first-child {
+    color: darkred;
+    font-weight: bold;
 }
