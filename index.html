@@ -7,18 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<h2 class="section-title right-title">Зворотній зв'язок</h2>
+<script>
+function startDialog() {
+    let city = prompt("Куди хочеш поїхати?");
 
-<form>
-    <input type="text" placeholder="Ваше ім'я"><br><br>
-    <input type="email" placeholder="Ваш email"><br><br>
-    <textarea placeholder="Ваше повідомлення"></textarea><br><br>
-    <button>Відправити</button>
-</form>
+    if (city) {
+        alert(city + " — гарний вибір!");
+    } else {
+        alert("Обери пізніше 🙂");
+    }
+}
+</script>
 
 <body>
 
+<script src="script.js"></script>
+
+
 <h1 id="main-header" class="page-title">Explore The World</h1>
+
+
+<div>
+     <button onclick="startDialog()">Почати</button>
+    <button onclick="userDialog()">Діалог</button>
+    <button onclick="devInfo('Євтєєва','Вероніка')">Розробник</button>
+    <button onclick="compareStrings('Подорож','Мандрівка')">Порівняння</button>
+    <button onclick="changeBackground()">Фон</button>
+    <button onclick="goToAsia()">Азія</button>
+    <button onclick="changeContent()">Змінити подорож</button>
+</div>
 
 <p style="color: blue;"><b>Автор:</b> Вероніка Євтєєва</p>
 
