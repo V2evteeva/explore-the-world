@@ -208,13 +208,161 @@ button {
     border: 4px solid lightblue;
 }
 
-/* Сусідній селектор */
-h2 + table {
-    border: 3px solid rgb(126, 2, 7);
+
+
+/* Секції */
+.asia-box {
+
+    background: rgb(248, 250, 251);
+
+    width: 90%;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Перший елемент списку */
-ul li:first-child {
-    color: darkred;
+
+
+/* Картки меню */
+.travel-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Одна картка */
+.action-card {
+
+    width: 220px;
+
+    background: linear-gradient(
+        to bottom,
+        white,
+        #e6f7ff
+    );
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Hover ефект */
+.action-card:hover {
+
+    transform: translateY(-8px);
+
+    background: linear-gradient(
+        to bottom,
+        #dff6ff,
+        #bde8ff
+    );
+}
+
+
+/* Заголовок картки */
+.action-card h3 {
+
+    color: darkblue;
+}
+
+
+/* Текст картки */
+.action-card p {
+
+    color: #444;
+}
+
+
+
+/* Список країн */
+#asia-list {
+
+    width: 300px;
+
+    margin-left: 40px;
+
+    font-size: 22px;
+}
+
+#asia-list li {
+
+    margin: 15px 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Активна країна */
+
+.active-country {
+
+    background: gold;
+
+    color: darkblue;
+
     font-weight: bold;
+
+    padding: 8px;
+
+    border-radius: 10px;
+}
+
+
+
+/* Режим подорожі */
+.travel-mode {
+
+    background: linear-gradient(
+        to bottom,
+        #dff6ff,
+        #b8e4ff
+    );
+}
+
+
+/* Кнопка режиму */
+.travel-mode-btn {
+
+    background: linear-gradient(
+        45deg,
+        darkblue,
+        rgb(0, 140, 255)
+    );
+
+    transition: 0.3s;
+}
+
+
+/* Hover кнопки */
+.travel-mode-btn:hover {
+
+    transform: scale(1.05);
+
+    background: linear-gradient(
+        45deg,
+        orange,
+        rgb(255, 140, 0)
+    );
 }

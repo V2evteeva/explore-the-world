@@ -10,7 +10,111 @@
 
 <h1 class="page-title">Азія</h1>
 
-<p>Азія — найбільший континент, відома своєю культурою, природою та архітектурою.</p>
+
+<div class="asia-box">
+
+<h2 class="section-title">
+Інтерактив для мандрівників
+</h2>
+
+<div class="asia-buttons">
+
+<button onclick="showCountry()">
+    🌏 Обрати країну
+</button>
+
+<button id="ticketBtn">
+    ✈️ Забронювати квиток
+</button>
+
+<button id="tipsBtn">
+    🎒 Поради туристу
+</button>
+
+<button id="guideBtn">
+    🧭 Туристичний гід
+</button>
+
+<button id="removeGuideBtn">
+    ❌ Видалити гіда
+</button>
+
+</div>
+
+
+
+<h2 class="section-title">
+Популярні країни Азії
+</h2>
+
+<ul id="asia-list">
+
+    <li>Японія 🇯🇵</li>
+    <li>Індія 🇮🇳</li>
+    <li>Таїланд 🇹🇭</li>
+    <li>Китай 🇨🇳</li>
+    <li>Індонезія 🇮🇩</li>
+
+</ul>
+
+<hr>
+
+
+<div class="asia-box">
+
+<h2 class="section-title">
+Можливості туриста
+</h2>
+
+<div id="asia-menu" class="travel-actions">
+
+    <div class="action-card"
+         data-action="background">
+
+        <h3>🌏 Про Азію</h3>
+
+        <p>
+        Цікавинка
+        </p>
+
+    </div>
+
+    <div class="action-card"
+         data-action="dialog">
+
+        <h3>👤 Турист</h3>
+
+        <p>
+        Ввести свої дані
+        </p>
+
+    </div>
+
+    <div class="action-card"
+         data-action="welcome">
+
+        <h3>🎉 Привітання</h3>
+
+        <p>
+        Отримати побажання
+        </p>
+
+    </div>
+
+</div>
+
+<br>
+
+<button
+data-toggle="travel-mode"
+class="travel-mode-btn">
+
+🌍 Режим подорожі
+</button>
+
+<hr>
+
+</div>
 
 <h2 class="section-title">Найкрасивіші місця Азії</h2>
 
@@ -100,6 +204,8 @@ allowfullscreen>
 <br><br>
 
 <a href="index.html" class="nav-link">Назад</a>
+
+<script src="script.js"></script>
 
 </body>
 </html>

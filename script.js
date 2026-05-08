@@ -80,3 +80,214 @@ function changeContent() {
         first.remove();
     }, 15000);
 }
+
+
+
+// Події 
+
+// Через атрибут
+
+function showCountry() {
+
+    alert(
+        "Наступна подорож: Японія 🇯🇵"
+    );
+}
+
+
+// Через властивість
+
+let ticketBtn =
+    document.getElementById("ticketBtn");
+
+if (ticketBtn) {
+
+    ticketBtn.onclick = function () {
+
+        alert(
+            "Квиток до Таїланду заброньовано ✈️"
+        );
+    };
+    
+}
+
+
+// addEventListener
+
+let tipsBtn =
+    document.getElementById("tipsBtn");
+
+function firstTip() {
+
+    alert(
+        "Не забудьте паспорт 🌏"
+    );
+}
+
+function secondTip() {
+
+    alert(
+        "Перевірте багаж перед польотом ✈️"
+    );
+}
+
+if (tipsBtn) {
+
+    tipsBtn.addEventListener(
+        "click",
+        firstTip
+    );
+
+    tipsBtn.addEventListener(
+        "click",
+        secondTip
+    );
+}
+
+
+// handleEvent
+
+let guideBtn =
+    document.getElementById("guideBtn");
+
+let travelGuide = {
+
+    handleEvent(event) {
+
+        alert(
+            "Гід відкрив інформацію про тур"
+        );
+    }
+};
+
+if (guideBtn) {
+
+    guideBtn.addEventListener(
+        "click",
+        travelGuide
+    );
+}
+
+
+// removeEventListener
+
+let removeGuideBtn =
+    document.getElementById(
+        "removeGuideBtn"
+    );
+
+if (removeGuideBtn) {
+
+    removeGuideBtn.onclick = function () {
+
+        guideBtn.removeEventListener(
+            "click",
+            travelGuide
+        );
+
+        alert(
+            "Туристичний гід видалений"
+        );
+    };
+}
+
+
+
+// Делегування подій
+
+let asiaList =
+    document.getElementById("asia-list");
+
+if (asiaList) {
+
+    asiaList.onclick = function(event) {
+
+        if (
+            event.target.tagName === "LI"
+        ) {
+
+            let countries =
+                asiaList.querySelectorAll("li");
+
+            countries.forEach(country => {
+
+                country.classList.remove(
+                    "active-country"
+                );
+            });
+
+            event.target.classList.add(
+                "active-country"
+            );
+        }
+    };
+}
+
+
+
+// data-* меню
+
+let asiaMenu =
+    document.getElementById("asia-menu");
+
+let actions = {
+
+    background() {
+
+    alert(
+        "🌏 Азія — континент неймовірних подорожей!"
+    );
+    },
+
+    dialog() {
+
+        let tourist =
+            prompt("Ваше ім’я:");
+
+        alert(
+            "Гарної подорожі, " +
+            tourist +
+            " 🌏"
+        );
+    },
+
+    welcome() {
+
+        alert(
+            "Ласкаво просимо до Азії ✈️"
+        );
+    }
+};
+
+if (asiaMenu) {
+
+    asiaMenu.onclick = function(event) {
+
+        let action =
+            event.target.dataset.action;
+
+        if (action) {
+
+            actions[action]();
+        }
+    };
+}
+
+
+// Behavior
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target.dataset.toggle ===
+            "travel-mode"
+        ) {
+
+            document.body.classList.toggle(
+                "travel-mode"
+            );
+        }
+    }
+);
