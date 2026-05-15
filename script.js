@@ -291,3 +291,106 @@ document.addEventListener(
         }
     }
 );
+
+
+// Валіза туриста
+
+let items =
+    document.querySelectorAll(".item");
+
+
+// Переміщення між елементами
+
+items.forEach(item => {
+
+    item.addEventListener(
+        "mouseover",
+        function(event) {
+
+            event.target.classList.add(
+                "item-hover"
+            );
+
+            console.log(
+                event.relatedTarget
+            );
+        }
+    );
+
+    item.addEventListener(
+        "mouseout",
+        function(event) {
+
+            event.target.classList.remove(
+                "item-hover"
+            );
+        }
+    );
+});
+
+
+// Перетягування
+
+items.forEach(item => {
+
+    item.onmousedown = function(event) {
+
+        item.style.position =
+            "absolute";
+
+        item.style.zIndex = 1000;
+
+        moveAt(
+            event.pageX,
+            event.pageY
+        );
+
+        // рух предмета
+
+        function moveAt(pageX, pageY) {
+
+            item.style.left =
+                pageX - item.offsetWidth / 2 + "px";
+
+            item.style.top =
+                pageY - item.offsetHeight / 2 + "px";
+        }
+
+        // рух миші
+
+        function onMouseMove(event) {
+
+            moveAt(
+                event.pageX,
+                event.pageY
+            );
+        }
+
+        document.addEventListener(
+            "mousemove",
+            onMouseMove
+        );
+
+        // завершення
+
+        document.onmouseup =
+            function() {
+
+            document.removeEventListener(
+                "mousemove",
+                onMouseMove
+            );
+
+            document.onmouseup =
+                null;
+        };
+    };
+
+    // вимкнення стандартного drag
+
+    item.ondragstart =
+        function() {
+
+        return false;
+    };
+});
